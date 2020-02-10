@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/item_iv"
+        android:layout_width="85dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/poster_avengerinfinity"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/item_iv"
+        tools:text="@string/title"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/date"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/item_iv"
+        android:layout_below="@id/item_title"/>
+
+    <TextView
+        android:id="@+id/item_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_date"
+        android:layout_toEndOf="@id/item_iv"
+        tools:text="@string/avanger_desc" />
+
+</RelativeLayout>
