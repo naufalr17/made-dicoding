@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         lv_movie.onItemClickListener = AdapterView.OnItemClickListener{_, _, position, _->
             val intent = Intent(this@MainActivity, DetailActivity::class.java)
-                intent.putExtra(DetailActivity.EXTRA_MOVIE,movies)
+                intent.putExtra(DetailActivity.EXTRA_MOVIE,movies[position])
 
             startActivity(intent)
         }
@@ -74,9 +74,9 @@ class MainActivity : AppCompatActivity() {
         movieTitle = resources.getStringArray(R.array.movie_title)
         movieDate = resources.getStringArray(R.array.movie_date)
         movieDesc = resources.getStringArray(R.array.movie_desc)
-        movieScore = resources.getStringArray(R.array.movie_desc)
-        movieStudio = resources.getStringArray(R.array.movie_desc)
-        movieDirector = resources.getStringArray(R.array.movie_desc)
+        movieScore = resources.getStringArray(R.array.movie_user_score)
+        movieStudio = resources.getStringArray(R.array.movie_studio)
+        movieDirector = resources.getStringArray(R.array.movie_director)
         moviePoster = resources.obtainTypedArray(R.array.movie_poster)
 
     }
