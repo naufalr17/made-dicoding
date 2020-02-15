@@ -5,11 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.appcompat.widget.AppCompatImageView
-import androidx.core.widget.ImageViewCompat
 import com.nsfc.moviecatalogue.R
+import kotlinx.android.synthetic.main.item_movie.view.*
 
 class MovieAdapter internal constructor(private val context: Context) : BaseAdapter() {
     internal var movie = arrayListOf<MovieModel>()
@@ -27,21 +24,16 @@ class MovieAdapter internal constructor(private val context: Context) : BaseAdap
         return itemMovie
     }
 
-    private inner class ViewHolder internal constructor(view: View) {
-
-
-        private val txtName: TextView = view.findViewById(R.id.item_title)
-        private val txtDate: TextView = view.findViewById(R.id.item_date)
-        private val txtDesc: TextView = view.findViewById(R.id.item_desc)
-        private val imgPoster: ImageView = view.findViewById(R.id.item_iv)
-
-
-        internal fun bind(movie: MovieModel) {
-            txtName.text = movie.movie_title.toString()
-            txtDate.text = movie.movie_date.toString()
-            txtDesc.text = movie.movie_desc.toString()
-            imgPoster.setImageResource(movie.movie_image).toString()
+    inner class ViewHolder internal constructor(private val view: View) {
+        fun bind(movie: MovieModel) {
+            with(view) {
+                item_title.text = movie.movie_title
+                item_date.text = movie.movie_date
+                item_desc.text = movie.movie_desc
+                item_iv.setImageResource(movie.movie_image)
+            }
         }
+
     }
 
     override fun getItem(position: Int): Any = movie[position]

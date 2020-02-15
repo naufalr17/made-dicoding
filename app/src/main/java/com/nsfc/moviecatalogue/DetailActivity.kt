@@ -1,18 +1,9 @@
 package com.nsfc.moviecatalogue
 
-import android.content.res.TypedArray
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
-import com.nsfc.moviecatalogue.MainActivity.Companion.EXTRA_MOVIE
-import com.nsfc.moviecatalogue.model.MovieAdapter
+import androidx.appcompat.app.AppCompatActivity
 import com.nsfc.moviecatalogue.model.MovieModel
 import kotlinx.android.synthetic.main.activity_detail.*
-import android.content.Intent
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
-
 
 
 class DetailActivity : AppCompatActivity() {
