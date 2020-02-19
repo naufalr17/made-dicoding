@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:menuCategory="container">
+        <item android:id="@+id/profile"
+            android:title="@string/profile"
+            android:icon="@drawable/ic_info_black_24dp"
+            app:showAsAction="always"/>
+        <item android:id="@+id/indonesia"
+            android:title="@string/indonesia"/>
+        <item android:id="@+id/french"
+            android:title="@string/french"/>
+<!--        <item android:id="@+id/rv_gridview"-->
+<!--            android:title="@string/gridview"/>-->
+<!--        <item android:id="@+id/rv_listveiw"-->
+<!--            android:title="@string/gridview"/>-->
+    </group>
+</menu>

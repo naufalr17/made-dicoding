@@ -1,41 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:padding="16dp">
+    android:layout_height="145dp">
 
     <ImageView
         android:id="@+id/item_iv"
-        android:layout_width="85dp"
-        android:layout_height="match_parent"
+        android:layout_width="100dp"
+        android:layout_height="125dp"
+        android:contentDescription="@string/movie"
         android:src="@drawable/poster_avengerinfinity"
-        android:layout_marginEnd="16dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/item_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_toEndOf="@id/item_iv"
-        tools:text="@string/title"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:textSize="18sp"/>
+        app:layout_constraintStart_toEndOf="@+id/item_iv"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/title" />
 
     <TextView
         android:id="@+id/item_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="@string/date"
-        android:layout_marginTop="4dp"
+        android:layout_below="@id/item_title"
         android:layout_toEndOf="@id/item_iv"
-        android:layout_below="@id/item_title"/>
+        app:layout_constraintStart_toStartOf="@+id/item_title"
+        app:layout_constraintTop_toBottomOf="@+id/item_title"
+        tools:text="@string/date" />
 
     <TextView
         android:id="@+id/item_desc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/item_date"
-        android:layout_toEndOf="@id/item_iv"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/item_title"
+        app:layout_constraintTop_toBottomOf="@+id/item_date"
         tools:text="@string/avanger_desc" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
