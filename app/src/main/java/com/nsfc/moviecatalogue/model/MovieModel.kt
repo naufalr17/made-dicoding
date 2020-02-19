@@ -5,7 +5,7 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 data class MovieModel(
-    var movie_image: Int,
+    var movie_image: Int?,
     var movie_title: String?,
     var movie_date: String?,
     var movie_desc: String?,
