@@ -2,6 +2,7 @@ package com.nsfc.moviecatalogue
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
@@ -41,6 +42,11 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
 
+            R.id.laguange_settings ->{
+                val mIntent = Intent(Settings.ACTION_LOCALE_SETTINGS)
+                startActivity(mIntent)
+            }
+
 //            R.id.rv_listveiw -> {
 //
 //            }
@@ -53,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
             else -> return true
         }
-
+        return super.onOptionsItemSelected(item)
     }
 
 }

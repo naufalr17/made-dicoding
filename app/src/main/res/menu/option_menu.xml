@@ -6,10 +6,10 @@
             android:title="@string/profile"
             android:icon="@drawable/ic_info_black_24dp"
             app:showAsAction="always"/>
-        <item android:id="@+id/indonesia"
-            android:title="@string/indonesia"/>
-        <item android:id="@+id/french"
-            android:title="@string/french"/>
+        <item android:id="@+id/laguange_settings"
+            android:title="@string/language_setting"/>
+<!--        <item android:id="@+id/french"-->
+<!--            android:title="@string/french"/>-->
 <!--        <item android:id="@+id/rv_gridview"-->
 <!--            android:title="@string/gridview"/>-->
 <!--        <item android:id="@+id/rv_listveiw"-->
