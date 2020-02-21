@@ -13,6 +13,9 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
 
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+
         val movies = intent.getParcelableExtra("movie") as MovieModel
 
         Glide.with(this).load(movies.movie_image).into(iv_poster)
